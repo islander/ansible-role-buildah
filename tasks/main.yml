@@ -1,0 +1,18 @@
+---
+# tasks file for buildah
+- name: Create kubic sources list
+  lineinfile:
+    path: "{{ buildah_sources_list }}"
+    line: "{{ buildah_repo_url }}"
+    create: yes
+
+- name: Add kubic apt signing key
+  apt_key:
+    url: "{{ buildah_key_url }}"
+    state: present
+
+- name: Install buildah
+  apt:
+    name: buildah
+    state: present
+    update_cache: yes

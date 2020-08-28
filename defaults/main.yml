@@ -1,0 +1,5 @@
+---
+# defaults file for buildah
+buildah_repo_url: "deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_{{ ansible_distribution_version }}/ /"
+buildah_sources_list: "/etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list"
+buildah_key_url: "https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_{{ ansible_distribution_version }}/Release.key"
